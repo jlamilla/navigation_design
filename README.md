@@ -1,39 +1,41 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Design package of the navigation application using the Atomic Design method.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+* Input, buttons, images, selects, among other Widgets customized and adapted for the Navigation application
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+* The only requirement is to have a Flutter version higher than 2.8.0
+* To integrate the package to your project you must add the url of the repository to your pubspec.yaml file in your flutter project.
+
+```yaml
+dependencies:
+    flutter:
+        sdk: flutter
+    navigation_design:
+        git:
+        url: https://github.com/jlamilla/navigation_design.git
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+* A simple example of using this package is to compare the default Flutter Text Widget and the one implemented in this package.
 
 ```dart
-const like = 'sample';
+//default text widget in flutter
+Text( 'Example',
+        style: TextStyle(
+          color: Color(0xFF1F1A62),
+          fontSize: 18,
+          fontWeight: 2,
+          fontFamily: 'RobotoMono',
+        ),
+        textAlign: TextAlign.center,
+        maxLines: 4,
+    );
+
+//modified text widget
+NormalText('Example');
+
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.

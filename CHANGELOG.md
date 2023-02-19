@@ -1,3 +1,3 @@
 # Changelog - Navigation Design
-## 0.0.1 - Subiendo estructura basada en atomic design.
+## 0.0.1 - Uploading structure based on atomic design.
 
