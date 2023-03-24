@@ -1,6 +1,6 @@
 name: navigation_design
 description: A new Flutter package project.
-version: 0.0.1
+version: 0.0.3
 repository: https://github.com/jlamilla/navigation_design.git
 
 environment:
@@ -21,11 +21,10 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
-flutter: null
+flutter: 
 # To add assets to your package, add an assets section, like this:
-# assets:
-#   - images/a_dot_burr.jpeg
-#   - images/a_dot_ham.jpeg
+  assets:
+    - assets/
 #
 # For details regarding assets in packages, see
 # https://flutter.dev/assets-and-images/#from-packages

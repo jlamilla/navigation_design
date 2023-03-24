@@ -6,8 +6,8 @@ import '../tokens/sizes_elements.dart';
 
 class Loading extends StatelessWidget {
 
-  final String title;
-  const Loading({Key? key, required this.title,}) : super(key: key);
+  final String? title;
+  const Loading({Key? key, this.title,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class Loading extends StatelessWidget {
         SizedBox(
           height: loadingHeight,
         ),
-        H2(text: title),
+        H2(text: title ?? 'Cargando'),
       ],
     ),
     );

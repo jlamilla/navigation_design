@@ -36,39 +36,92 @@ class OurText extends StatelessWidget{
     );
   }
 }
-
+//Title
 class H1 extends StatelessWidget{
   final String text;
-  const H1({Key? key, required this.text}):super(key:key);
+  final Color? color;
+  const H1({Key? key, required this.text, this.color}):super(key:key);
   @override
   Widget build(BuildContext context) {
-    return OurText (text: text, colorText: h1Color, fontSize: h1Size, fontWeight: FontWeight.normal, key: Key('${key}h1'),);
+    return OurText (
+      text: text, 
+      colorText: color ?? h1Color, 
+      fontSize: h1Size, 
+      fontWeight: FontWeight.w600, 
+      textAlign: TextAlign.center, 
+      key: Key('${key}h1'),
+    );
   }
 }
-
-class H1Bold extends StatelessWidget{
-  final String text;
-  const H1Bold({Key? key, required this.text}):super(key:key);
-  @override
-  Widget build(BuildContext context) {
-    return OurText (text: text, colorText: h1Color, fontSize: h1Size, fontWeight: FontWeight.bold, key: Key('${key}h1'),);
-  }
-}
-
+//sub - title
 class H2 extends StatelessWidget{
   final String text;
-  const H2({Key? key, required this.text}):super(key:key);
+  final Color? color;
+  const H2({Key? key, required this.text, this.color}):super(key:key);
   @override
   Widget build(BuildContext context) {
-    return OurText (text: text, colorText: h2Color, fontSize: h2Size, key: Key('${key}h2'),);
+    return OurText (
+      text: text, 
+      colorText: color ?? h2Color, 
+      fontSize: h2Size, 
+      fontWeight: FontWeight.w500, 
+      key: Key('${key}h2'),
+    );
   }
 }
 
-class NormalText extends StatelessWidget{
+//
+class SpamText extends StatelessWidget{
   final String text;
-  const NormalText({Key? key, required this.text}):super(key:key);
+  final int? maxLines;
+  const SpamText({Key? key, required this.text, this.maxLines}):super(key:key);
   @override
   Widget build(BuildContext context) {
-    return OurText (text: text, colorText: primaryColor,fontSize: contentTextSize, key: Key('${key}normalText'),);
+    return RichText(
+      key: Key('${key}spamText'),
+      maxLines: maxLines,
+      text: TextSpan(
+        text: text,
+        style: TextStyle(
+          color: spamTextColor,
+          height: spamTextSize, 
+        )
+      )
+    );
+  }
+}
+
+//Links
+class LinkText extends StatelessWidget{
+  final String text;
+  const LinkText({Key? key, required this.text}):super(key:key);
+  @override
+  Widget build(BuildContext context) {
+    return OurText (
+      text: text, 
+      colorText: linkTextColor, 
+      fontSize: linkTextSize, 
+      fontWeight: FontWeight.w500, 
+      key: Key('${key}linkText'),
+    );
+  }
+}
+
+//
+class NormalText extends StatelessWidget{
+  final String text;
+  final Color? color;
+  final TextAlign? textAlign;
+  const NormalText({Key? key, required this.text, this.color, this.textAlign}):super(key:key);
+  @override
+  Widget build(BuildContext context) {
+    return OurText (
+      text: text, 
+      colorText: color ?? primaryColor,
+      textAlign: textAlign,
+      fontSize: normalTextSize,
+      fontWeight: FontWeight.normal,
+      key: Key('${key}normalText'),
+    );
   }
 }

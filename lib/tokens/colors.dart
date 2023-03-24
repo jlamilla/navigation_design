@@ -8,9 +8,10 @@
 //  ..................................................
 import 'package:flutter/material.dart';
 
-
   const Color black = Colors.black;
   const Color white = Colors.white;
+  const Color grey = Colors.grey;
+  Color opacity1 = Colors.grey.withOpacity(0.8);
   Color boxShadow1 = Colors.grey.withOpacity(0.5);
   Color boxShadow2 = Colors.grey.withOpacity(0.2);
   const Color primaryColor = Color(0xFF1F1A62);

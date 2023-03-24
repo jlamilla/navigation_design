@@ -45,19 +45,23 @@ class OurButtonIcon extends StatelessWidget{
 
 class ButtonAddition extends StatelessWidget{
   final Function()? onPressed;
-  const ButtonAddition({Key? key, this.onPressed}):super(key:key);
+  final double? height;
+  final double? width;
+  const ButtonAddition({Key? key, this.onPressed, this.height, this.width}):super(key:key);
   @override
   Widget build(BuildContext context) {
-    return OurButtonIcon (icon: CupertinoIcons.plus, onPressed: onPressed, key: Key('${key}ButtonAddition'));
+    return OurButtonIcon (icon: CupertinoIcons.plus, onPressed: onPressed, width: width, height: height, key: Key('${key}ButtonAddition'));
   }
 }
 
 class ButtonSubtraction extends StatelessWidget{
   final Function()? onPressed;
-  const ButtonSubtraction({Key? key, this.onPressed}):super(key:key);
+  final double? height;
+  final double? width;
+  const ButtonSubtraction({Key? key, this.onPressed, this.height, this.width}):super(key:key);
   @override
   Widget build(BuildContext context) {
-    return OurButtonIcon (icon: CupertinoIcons.minus, onPressed: onPressed, key: Key('${key}ButtonSubtraction'));
+    return OurButtonIcon (icon: CupertinoIcons.minus, onPressed: onPressed, width: width, height: height, key: Key('${key}ButtonSubtraction'));
   }
 }
 

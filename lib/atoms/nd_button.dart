@@ -10,6 +10,9 @@ class OurButton extends StatelessWidget{
   final IconData? icon;
   final bool boxShadow;
   final bool gradient;
+  final BorderRadiusGeometry? borderRadius;
+  final double? height;
+  final double? width;
 
   const OurButton ({ 
       Key? key, 
@@ -18,6 +21,9 @@ class OurButton extends StatelessWidget{
       required this.title, 
       required this.boxShadow, 
       required this.gradient,
+      this.borderRadius, 
+      this.height, 
+      this.width
     }):super(key:key);
 
   @override
@@ -26,7 +32,7 @@ class OurButton extends StatelessWidget{
               onTap: onTap,
               child: Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: borderRadius ?? BorderRadius.circular(15),
                           gradient: gradient ? buttonGradient : null,
                           boxShadow: [
                                       boxShadow
@@ -34,7 +40,8 @@ class OurButton extends StatelessWidget{
                                       : BoxShadow( color: buttonBoxShadow2, spreadRadius: 1, blurRadius: 10,)
                                     ]
                         ),
-                        height: buttonHeight,
+                        height: height ?? buttonHeight,
+                        width: width ?? double.infinity,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children:[
@@ -61,12 +68,25 @@ class ButtonNormal extends StatelessWidget {
   final String title;
   final IconData? icon;
   final bool? boxShadow;
+  final BorderRadiusGeometry? borderRadius;
+  final double? height;
+  final double? width;
   
-  const ButtonNormal({Key? key, this.onTap, required this.title, this.icon, this.boxShadow}) : super(key: key);
+  const ButtonNormal({Key? key, this.onTap, required this.title, this.icon, this.boxShadow, this.borderRadius, this.height, this.width}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    return OurButton (title: title, gradient: false , boxShadow: boxShadow ?? false , onTap: onTap, icon: icon, key: Key('${key}ButtonNormal'),);
+    return OurButton (
+      title: title, 
+      gradient: false , 
+      boxShadow: boxShadow ?? false , 
+      onTap: onTap, 
+      icon: icon,
+      borderRadius: borderRadius,
+      width: width,
+      height: height,
+      key: Key('${key}ButtonNormal'),
+    );
   }
 }
 
@@ -76,11 +96,24 @@ class ButtonGradient extends StatelessWidget {
   final String title;
   final IconData? icon;
   final bool? boxShadow;
+  final BorderRadiusGeometry? borderRadius;
+  final double? height;
+  final double? width;
   
-  const ButtonGradient({Key? key, this.onTap, required this.title, this.icon, this.boxShadow}) : super(key: key);
+  const ButtonGradient({Key? key, this.onTap, required this.title, this.icon, this.boxShadow, this.borderRadius, this.height, this.width}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    return OurButton (title: title, gradient: true , boxShadow: boxShadow ?? false , onTap: onTap, icon: icon, key: Key('${key}ButtonGradient'),);
+    return OurButton (
+      title: title, 
+      gradient: true , 
+      boxShadow: boxShadow ?? false , 
+      onTap: onTap, 
+      icon: icon,
+      borderRadius: borderRadius,
+      width: width,
+      height: height,
+      key: Key('${key}ButtonGradient'),
+    );
   }
 }

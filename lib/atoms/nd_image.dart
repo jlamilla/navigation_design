@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class OurImage extends StatelessWidget {
-  final String placeholder;
+  final String? placeholder;
   final ImageProvider<Object> image;
   final double? widthImage;
   final double? heightImage;
@@ -10,7 +10,7 @@ class OurImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FadeInImage(
-          placeholder: AssetImage(placeholder),
+          placeholder: AssetImage(placeholder ?? 'assets/loading.gif'),
           image: image,
           width:widthImage ,
           height: heightImage,
@@ -21,10 +21,10 @@ class OurImage extends StatelessWidget {
 
 class OurNetworkImage extends StatelessWidget {
   final String url;
-  final String placeholder;
+  final String? placeholder;
   final double? widthImage;
   final double? heightImage;
-  const OurNetworkImage({super.key,  required this.url, this.widthImage, this.heightImage, required this.placeholder,});
+  const OurNetworkImage({super.key,  required this.url, this.widthImage, this.heightImage, this.placeholder,});
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +34,10 @@ class OurNetworkImage extends StatelessWidget {
 
 class OurAssetImage extends StatelessWidget {
   final String assetName;
-  final String placeholder;
+  final String? placeholder;
   final double? widthImage;
   final double? heightImage;
-  const OurAssetImage({super.key,  required this.assetName, this.widthImage, this.heightImage, required this.placeholder,});
+  const OurAssetImage({super.key,  required this.assetName, this.widthImage, this.heightImage, this.placeholder,});
 
   @override
   Widget build(BuildContext context) {

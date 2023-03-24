@@ -120,6 +120,11 @@ class TextFormAuth extends StatelessWidget{
   final bool? obscureText;
   final Function()? onPressedObscureTextFalse;
   final Function()? onPressedObscureTextTrue;
+  final Color? colorText;
+  final Color? colorIcon;
+  final Color? colorBorder;
+  final double? fontSize;
+  final double? widthBorder;
 
   const TextFormAuth({
     Key? key, 
@@ -131,7 +136,12 @@ class TextFormAuth extends StatelessWidget{
     this.prefixIcon, 
     this.obscureText, 
     this.onPressedObscureTextFalse, 
-    this.onPressedObscureTextTrue,
+    this.onPressedObscureTextTrue, 
+    this.colorText, 
+    this.colorIcon, 
+    this.colorBorder, 
+    this.fontSize, 
+    this.widthBorder,
     }):super(key:key);
 
   @override
@@ -147,14 +157,14 @@ class TextFormAuth extends StatelessWidget{
         obscureText: obscureText,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(textFormContentPadding),
-          prefixIcon: prefixIcon != null ? Icon(prefixIcon, color: textFormIconColor): null,
+          prefixIcon: prefixIcon != null ? Icon(prefixIcon, color: colorIcon ?? textFormIconColor): null,
           fillColor: textFormBackground,
           filled: true,
           labelText: label,
-          labelStyle: TextStyle(color: textFormColor , fontSize: textFormSize),
+          labelStyle: TextStyle(color: colorText ?? textFormColor , fontSize: fontSize ?? textFormSize),
           border: const OutlineInputBorder(),
-          enabledBorder: OutlineInputBorder( borderSide: const BorderSide( color: textFormBorderColor), borderRadius: BorderRadius.circular(textFormBorderRadius)),
-          focusedBorder:  OutlineInputBorder(borderSide: BorderSide( color: textFormBorderColor , width: textFormBorderWidth),borderRadius: BorderRadius.circular(textFormBorderRadius)
+          enabledBorder: OutlineInputBorder( borderSide: BorderSide( color: colorBorder ?? textFormBorderColor), borderRadius: BorderRadius.circular(textFormBorderRadius)),
+          focusedBorder:  OutlineInputBorder(borderSide: BorderSide( color: colorBorder ?? textFormBorderColor , width: widthBorder ?? textFormBorderWidth),borderRadius: BorderRadius.circular(textFormBorderRadius)
           ),
           suffixIcon: obscureText != null ? obscureText!
                     ? IconButton(onPressed: onPressedObscureTextTrue , icon: const Icon(Icons.remove_red_eye, color: textFormObscureTextVisibleColor,))

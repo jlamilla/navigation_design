@@ -10,7 +10,9 @@ import 'package:navigation_design/tokens/colors.dart';
 
 const h1Color = white;
 const h2Color = secondaryColor;
-const h3Color = secondaryColor;
+const linkTextColor = grey;
+final spamTextColor = opacity1;
+const normalTextColor = black;
 const selectedItemColor = secondaryColor;
 const unselectedItemColor = secondaryColor;
 const footerBackground = primaryColor;
