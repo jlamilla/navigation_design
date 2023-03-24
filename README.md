@@ -6,7 +6,7 @@ Design package of the navigation application using the Atomic Design method.
 
 ## Getting started
 
-* The only requirement is to have a Flutter version higher than 2.8.0
+* The only requirement is to have a Flutter version higher than 3.8.0
 * To integrate the package to your project you must add the url of the repository to your pubspec.yaml file in your flutter project.
 
 ```yaml
@@ -15,7 +15,7 @@ dependencies:
         sdk: flutter
     navigation_design:
         git:
-        url: https://github.com/jlamilla/navigation_design.git
+            url: https://github.com/jlamilla/navigation_design.git
 ```
 
 ## Usage

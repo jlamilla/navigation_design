@@ -125,6 +125,7 @@ class TextFormAuth extends StatelessWidget{
   final Color? colorBorder;
   final double? fontSize;
   final double? widthBorder;
+  final double? contentPadding;
 
   const TextFormAuth({
     Key? key, 
@@ -141,7 +142,8 @@ class TextFormAuth extends StatelessWidget{
     this.colorIcon, 
     this.colorBorder, 
     this.fontSize, 
-    this.widthBorder,
+    this.widthBorder, 
+    this.contentPadding,
     }):super(key:key);
 
   @override
@@ -156,7 +158,7 @@ class TextFormAuth extends StatelessWidget{
         prefixIcon: prefixIcon,
         obscureText: obscureText,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(textFormContentPadding),
+          contentPadding: EdgeInsets.all( contentPadding ?? textFormContentPadding),
           prefixIcon: prefixIcon != null ? Icon(prefixIcon, color: colorIcon ?? textFormIconColor): null,
           fillColor: textFormBackground,
           filled: true,
