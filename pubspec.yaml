@@ -1,6 +1,6 @@
 name: navigation_design
-description: A new Flutter package project.
-version: 0.0.3
+description: Custom design for navigation app.
+version: 0.0.1
 repository: https://github.com/jlamilla/navigation_design.git
 
 environment:
