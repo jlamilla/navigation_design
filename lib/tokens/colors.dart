@@ -9,6 +9,9 @@
 import 'package:flutter/material.dart';
 
   const Color black = Colors.black;
+  const Color blackOpacity = Colors.black87;
+  const Color blackOpacity2 = Colors.black38;
+  const Color blackOpacity3 = Colors.black54;
   const Color white = Colors.white;
   const Color grey = Colors.grey;
   Color opacity1 = Colors.grey.withOpacity(0.8);

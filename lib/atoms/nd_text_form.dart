@@ -151,7 +151,7 @@ class TextFormAuth extends StatelessWidget{
     return OurTextForm (
         key: Key('${key}TextFormAuth'),
         label: label, 
-        keyBoardType: keyBoardType, 
+        keyBoardType: keyBoardType,
         formatter: formatter, 
         validator: validator,
         onChanged: onChanged,
@@ -166,7 +166,7 @@ class TextFormAuth extends StatelessWidget{
           labelStyle: TextStyle(color: colorText ?? textFormColor , fontSize: fontSize ?? textFormSize),
           border: const OutlineInputBorder(),
           enabledBorder: OutlineInputBorder( borderSide: BorderSide( color: colorBorder ?? textFormBorderColor), borderRadius: BorderRadius.circular(textFormBorderRadius)),
-          focusedBorder:  OutlineInputBorder(borderSide: BorderSide( color: colorBorder ?? textFormBorderColor , width: widthBorder ?? textFormBorderWidth),borderRadius: BorderRadius.circular(textFormBorderRadius)
+          focusedBorder:  OutlineInputBorder(borderSide: BorderSide( color: colorBorder ?? textFormBorderColor2 , width: widthBorder ?? textFormBorderWidth),borderRadius: BorderRadius.circular(textFormBorderRadius)
           ),
           suffixIcon: obscureText != null ? obscureText!
                     ? IconButton(onPressed: onPressedObscureTextTrue , icon: const Icon(Icons.remove_red_eye, color: textFormObscureTextVisibleColor,))

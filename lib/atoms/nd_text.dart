@@ -101,7 +101,7 @@ class LinkText extends StatelessWidget{
       text: text, 
       colorText: linkTextColor, 
       fontSize: linkTextSize, 
-      fontWeight: FontWeight.w500, 
+      fontWeight: FontWeight.w600, 
       key: Key('${key}linkText'),
     );
   }
